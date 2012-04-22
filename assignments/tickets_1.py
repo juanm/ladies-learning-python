@@ -1,6 +1,6 @@
 num_tickets = 100
 
-print "We have %d ticket(s) left" % (num_tickets)
+print "There are %d ticket(s) left" % (num_tickets)
 print "Get your tickets before we sell out!"
 
 tickets_wanted = raw_input("How many tickets would you like?\n")
