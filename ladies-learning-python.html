@@ -275,10 +275,10 @@
 		<pre>>>> type("What's up?")<br>&lttype 'str'&gt </pre>
       </article>
 
-      <article id='classes-galore'>
+      <article id='types-galore'>
         <style>
-          #classes-galore .build { margin-top: 40px; }
-          #classes-galore .large-font { margin: 70px 0px; }
+          #types-galore .build { margin-top: 40px; }
+          #types-galore .large-font { margin: 70px 0px; }
         </style>
         <h3>Types</h3>
         <div class='build'>
@@ -288,6 +288,29 @@
 		  <p>Integers and Strings are <b>Types</b> in Python.</p> 
         </div>
       </article>
+	
+	  <article id='types-picky'>
+        <style>
+          #types-galore .build { margin-top: 40px; }
+          #types-galore .large-font { margin: 70px 0px; }
+        </style>
+        <h3>Types</h3>
+        <div class='build'>
+			<pre>>>>1+1</pre>
+			<pre>2</pre>
+			
+			<pre>>>>"1"+"1"</pre>
+			<pre>"12"</pre>
+			<pre>>>>"1"+2</pre>
+<pre>
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: unsupported operand type(s) for +: 'int' and 'str'
+</pre>
+        </div>
+      </article>
+	
+
 	  <article id='programming-lingo'>
         <style>
           #programming-lingo .build { margin-top: 40px; }
@@ -369,21 +392,22 @@
 		  
         </section>
       </article>
-	
+
 	  <article>
-        <h3>String Interpolation</h3>
+        <h3>Building Strings</h3>
         <section class='build'>
-		  <pre>>>>days = 30</pre>
-		  <pre>>>>"There are %d days in April" % days </pre>
-		  <pre>>>>day = "Saturday"</pre>
-		  <pre>>>>"Today is a %s" % day</pre>
-		  <pre>
->>>weekdays = 7
->>>months = 12
->>>"There are %d days in a week and %d months in a year"
-% (weekdays, months)</pre>
+		  <pre>>>>"There are " + "30 " + "days in April"</pre>
+		  <pre>'There are 30 days in April'</pre>
+		  <pre>>>>"Today is a " + "Saturday"</pre>
+		  <pre>'Today is a Saturday'</pre>
+<pre>>>> "There are " + "7 " + "days in a week and " + "30 " + \
+... "days in April"
+</pre>
+		  <pre>'There are 7 days in a week and 30 days in April'</pre>
         </section>
       </article>
+
+
       
       <article>
         <h3>
@@ -435,6 +459,16 @@
 		</pre>
 
 	  </article>
+
+	  <article id='boolean'>
+        <h3>Meet one more type - Boolean</h3>
+		<p> Booleans are a special type. There are only two booleans: </p> 
+		<p><b>True</b></p>
+		<p><b>False</b></p>
+
+		<p>Booleans are used extensively in programming, we will see examples in upcoming slides.</p>
+		
+      </article>
       
       <article>
         <h3>
@@ -587,6 +621,34 @@
         </section>
       </article>
 
+	  <article>
+        <h3>Building Strings - Revisited</h3>
+        <section class='build'>
+		  <pre>>>>"There are " + "30 " + "days in April"</pre>
+		  <pre>>>>days = 30
+>>>"There are %d days in April" % days </pre>
+<pre>'There are 30 days in April'</pre>
+<pre>>>>"Today is a "  + "Saturday"</pre>
+		  <pre>>>>day = "Saturday"
+>>>"Today is a %s" % day</pre>
+		  <pre>'Today is a Saturday'</pre>
+		</section>
+</article>
+
+	<article>
+		<section class='build'>
+		  <pre>
+>>>weekdays = 7
+>>>months = 12
+>>>"There are %d days in a week and %d months in a year"
+% (weekdays, months)</pre>
+<pre>'There are 12 days in a week and 12 months in a year'</pre>
+        </section>
+      </article>
+
+	  
+
+
 	<article id='recap-one'>
         <style>
           #recap-one .large-font { margin: 50px 0px; text-align: center; }
@@ -597,9 +659,10 @@
         <div class='build'>
           <p class='large-font'>Integer</p>
           <p class='large-font'>String</p>
+          <p class='large-font'>Boolean</p>
+          <p class='large-font'>Variable</p>
           <p class='large-font'>Type</p>
           <p class='large-font'>Function</p>
-          <p class='large-font'>Variable</p>
         </div>
       </article>
 
@@ -649,6 +712,28 @@
 		
 		<p>(example in code/party.py)</p>
       </article>
+
+	  <article>
+		<h3> Strings - Special Characters </h3>
+		<p>
+		print "CSI Annex"</br>	
+		print "720 Bathurst Street"</br>
+		print "Toronto, Ontario"</br>
+</p>
+<p>print "CSI Annex \n720 Bathurst Street \nToronto, Ontario"</p>
+
+<p> Try these other special characters: </p>
+<p>
+\' <br>
+\" <br>
+\\ <br>
+\t <br>
+\n <br>
+</p>
+	
+   
+
+</article>
       
 	 <article id='real-twitter'>
         <style>
